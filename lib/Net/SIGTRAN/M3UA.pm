@@ -10,7 +10,7 @@ use Data::Dumper;
 use warnings;
 our @ISA = qw(Net::SIGTRAN::SCTP);
 
-our $VERSION = '0.1.0';
+our $VERSION = '0.1.1';
 
 use constant MessageClass_Value => {
    0 => 'MGMT',
@@ -604,7 +604,7 @@ __END__
 
 =head1 NAME
 
-Net::SIGTRAN::SCTP - An implementation to access to lksctp to provide sctp implementation in perl.
+Net::SIGTRAN::M3UA - An implementation to create M3UA protol stack to provide SIGTRAN stack implementation in perl.
 
 =head1 SYNOPSIS
 

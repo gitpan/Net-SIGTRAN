@@ -13,7 +13,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw(new abc
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
-our $VERSION = '0.1.0';
+our $VERSION = '0.1.1';
 
 require XSLoader;
 XSLoader::load('Net::SIGTRAN::SCTP', $VERSION);
