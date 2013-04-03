@@ -1,4 +1,4 @@
-Before installing Net::SIGTRAN::SCTP, make sure that the following package:
+Before installing Net::SIGTRAN, make sure that the following package:
 
 $ rpm -qa|grep sctp
 lksctp-tools-1.0.6-3.el5

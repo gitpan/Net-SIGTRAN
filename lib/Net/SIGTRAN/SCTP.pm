@@ -13,7 +13,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw(new abc
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
-our $VERSION = '0.0.1';
+our $VERSION = '0.1.0';
 
 require XSLoader;
 XSLoader::load('Net::SIGTRAN::SCTP', $VERSION);
@@ -27,9 +27,9 @@ sub new {
 
    $args{'HOST'}='127.0.0.1' if (!exists $args{'HOST'});
    $args{'PPID'}=0 if (!exists $args{'PPID'});
-    $args{'FLAGS'}=0 if (!exists $args{'FLAGS'});
-    $args{'TIME_TO_LIVE'}=0 if (!exists $args{'TIME_TO_LIVE'});
-    $args{'CONTEXT'}=0 if (!exists $args{'CONTEXT'});
+   $args{'FLAGS'}=0 if (!exists $args{'FLAGS'});
+   $args{'TIME_TO_LIVE'}=0 if (!exists $args{'TIME_TO_LIVE'});
+   $args{'CONTEXT'}=0 if (!exists $args{'CONTEXT'});
 
 # ,ppid,flags,stream_no,timetolive,context
    return bless {
@@ -118,9 +118,12 @@ __END__
 
 Net::SIGTRAN::SCTP - An implementation to access to lksctp to provide sctp implementation in perl.
 
-=head1 Server Example
+=head1 SYNOPSIS
+
+=head2 Server Example
 
 use Net::SIGTRAN::SCTP;
+
 use threads;
 
 my $server=new Net::SIGTRAN::SCTP(
@@ -144,7 +147,7 @@ sub processRequest {
 }
 
 
-=head1 Client Example
+=head2 Client Example
 
 use Net::SIGTRAN::SCTP;
 
